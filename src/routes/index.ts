@@ -1,9 +1,10 @@
 import express, { Request, Response, NextFunction } from 'express';
-var router = express.Router();
+const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req:Request, res:Response, next:NextFunction) {
-  res.render('index', { title: 'Express' });
+  res.send('home route')
 });
 
-module.exports = router;
+export default router;
+

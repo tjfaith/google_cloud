@@ -4,9 +4,9 @@ require("dotenv").config();
  * Module dependencies.
  */
 
-var app = require('../src/app').default;
-var debug = require('debug')('google-cloud:server');
-var http = require('http');
+const app = require("../dist/app").default;
+const debug = require("debug")("server:server");
+const http = require("http");
 
 /**
  * Get port from environment and store in Express.
