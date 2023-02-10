@@ -14,7 +14,9 @@ COPY package.json yarn.lock ./
 # If you add a package-lock.json speed your build by switching to 'npm ci'.
 # RUN npm ci --only=production
 # RUN npm install --production
-# RUN yarn install --production
+# RUN yarn install --
+RUN npm install -g typescript
+
 RUN yarn install
 # Copy local code to the container image.
 COPY . .
