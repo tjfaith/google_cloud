@@ -1,9 +1,3 @@
-lib-cov
 node_modules/
-jspm_packages/
-dist
+dist/
 .env
-.sqlite
-coverage
-data.txt
-database.sqlite
