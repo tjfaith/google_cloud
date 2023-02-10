@@ -1,18 +1,3 @@
-# FROM node:16-alpine
-
-# WORKDIR /app
-
-# COPY package.json yarn.lock ./
-# RUN yarn install
-
-# COPY . .
-
-# RUN yarn build
-
-# EXPOSE 7000
-# CMD ["yarn", "start"]
-
-
 # Use the official lightweight Node.js 18 image.
 # https://hub.docker.com/_/node
 FROM node:19-alpine
@@ -33,6 +18,9 @@ RUN yarn install
 
 # Copy local code to the container image.
 COPY . ./
+
+# Expose port 80
+EXPOSE 8080
 
 # Run the web service on container startup.
 CMD ["yarn", "start"]
