@@ -26,9 +26,11 @@
 
 FROM node:19-alpine
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
 COPY package.json yarn.lock ./
+
+sudo chmod -R 777 /usr/local/bin/npm
 
 RUN npm i yarn
 
