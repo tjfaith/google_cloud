@@ -29,6 +29,9 @@ FROM node:19-alpine
 WORKDIR /app
 
 COPY package.json yarn.lock ./
+
+RUN npm i yarn
+
 RUN yarn install
 
 COPY . .
