@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req:Request, res:Response, next:NextFunction) {
-  res.send('home route hereee')
+  res.send('this is the index route')
 });
 
 export default router;
