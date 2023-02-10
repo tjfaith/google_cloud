@@ -3,7 +3,7 @@
 FROM node:19-alpine
 
 # Create and change to the app directory.
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy application dependency manifests to the container image.
 # A wildcard is used to ensure both package.json AND package-lock.json are copied.
@@ -16,13 +16,8 @@ COPY package.json yarn.lock ./
 # RUN npm install --production
 RUN yarn install --production
 
-RUN yarn install
-
 # Copy local code to the container image.
 COPY . ./
-
-# Expose port 80
-EXPOSE 8080
 
 # Run the web service on container startup.
 CMD ["yarn", "start"]
