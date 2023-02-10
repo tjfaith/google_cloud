@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req:Request, res:Response, next:NextFunction) {
-  res.send('respond yuyyu');
+  res.send('new users');
 });
 
 export default router;
